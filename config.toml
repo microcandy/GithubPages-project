@@ -1,0 +1,74 @@
+baseurl = "http://microcandy.github.io"
+languageCode = "en-us"
+title = "microcandy"
+theme = "future"
+
+[params]
+    description     = "microcandy's simple blog"
+    disqusShortname = "microcandy"
+    navbarTitle     = "microcandy"
+    loadFavicon     = true
+
+[params.intro]
+    header    = "microcandy's blog"
+    paragraph = "There is no regrets to satisfy my curiosities.<i class='fa fa-hand-peace-o'></i>"
+
+[params.intro.pic]
+    src       = "/img/main/logo.png"
+    # modify your picture in the shape of a circle or
+    # future imperfect's hexagonal shape
+    circle    = true
+    imperfect = true
+    width     = "70"
+    alt       = "Hugo Future Imperfect"
+
+[params.postAmount]
+    sidebar = 2
+
+[[menu.main]]
+    name = "主页"
+    url = "/"
+    identifier = "fa fa-newspaper-o"
+    weight = 1
+
+[[menu.main]]
+    name = "分类"
+    url = "/categories"
+    weight = 2
+
+[[menu.main]]
+    name = "全部"
+    url = "/post"
+    weight = 3
+    
+[social]
+    github          = "microcandy"
+    # weibo           = "5666102711"
+    qq              = "10665144"
+    email           = "microcandy@foxmail.com"
+    bitbucket       = ""
+    jsfiddle        = ""
+    codepen         = ""
+    foursquare      = ""
+    dribbble        = ""
+    deviantart      = ""
+    behance         = ""
+    flickr          = ""
+    instagram       = ""
+    youtube         = ""
+    vimeo           = ""
+    vine            = ""
+    medium          = ""
+    wordpress       = ""
+    tumblr          = ""
+    xing            = ""
+    linkedin        = ""
+    slideshare      = ""
+    stackoverflow   = ""
+    reddit          = ""
+    pinterest       = ""
+    googleplus      = ""
+    facebook        = ""
+    facebook_admin  = ""
+    twitter_domain  = ""
+    twitter         = ""

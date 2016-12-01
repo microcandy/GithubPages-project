@@ -1,0 +1,44 @@
+<!-- Social Share Button HTML -->
+
+<!-- weibo -->
+<li><a href="http://service.weibo.com/share/share.php?url={{ .Permalink }}&title={{ .Title }}&pic=http://tolove.date/apple-touch-icon.png" target="_blank" class="share-btn facebook">
+    <i class="fa fa-weibo"></i>
+    <p>微博</p>
+</a></li>
+
+<!-- tx weibo -->
+<li><a href="http://share.v.t.qq.com/index.php?c=share&a=index&url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share-btn reddit">
+    <i class="fa fa-tencent-weibo"></i>
+    <p>腾讯微博</p>
+</a></li>
+
+<!-- QQ -->
+<li><a href="javascript:void(0);" onclick="window.open('http://connect.qq.com/widget/shareqq/index.html?url={{ .Permalink }}&title={{ .Title }}&site=http://tolove.date&pics=http://tolove.date/apple-touch-icon.png')"
+  title="QQ" target="_blank" class="share-btn twitter">
+    <i class="fa fa-qq"></i>
+    <p>QQ</p>
+</a></li>
+
+<!-- qzone -->
+<li><a href="javascript:void(0);" onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{ .Permalink }}&title={{ .Title }})" target="_blank" class="share-btn google-plus">
+    <i class="fa fa-star"></i>
+    <p>qq空间</p>
+</a></li>
+
+<!-- LinkedIn -->
+<!--<li><a href="//www.linkedin.com/shareArticle?url={{ .Permalink }}" target="_blank" class="share-btn linkedin">
+    <i class="fa fa-linkedin"></i>
+    <p>LinkedIn</p>
+</a></li>-->
+
+<!-- StumbleUpon (url, title) -->
+<!--<li><a href="//www.stumbleupon.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" class="share-btn stumbleupon">
+    <i class="fa fa-stumbleupon"></i>
+    <p>StumbleUpon</p>
+</a></li>-->
+
+<!-- Email -->
+<li><a href="mailto:?subject=Check out this post by {{ .Params.author }}&body={{ .Permalink }}" target="_blank" class="share-btn email">
+    <i class="fa fa-envelope"></i>
+    <p>E-mail</p>
+</a></li>

@@ -1,0 +1,15 @@
+<article class="post">
+    {{ .Render "header" }}
+
+    {{ .Render "featured" }}
+    <div id="content">
+        {{ .Content }}
+    </div>
+
+    <footer>
+        {{ .Render "footer-category" }}
+    </footer>
+    <h2>Comments</h2>
+        {{ partial "disqus" . }}
+</article>
+{{ .Render "prev-next" }}
