@@ -2,12 +2,12 @@
 author = "microcandy"
 categories = ["Development", "Github", "hugo"]
 date = "2016-05-16T00:44:25+08:00"
-description = "How to create a blog based on hugo & Github Pages."
+description = "How to hugo & Github Pages."
 featured = "how-to-hugo-01.png"
-featuredalt = ""
-featuredpath = "date"
+featuredalt = "how-to-hugo"
+featuredpath = "/img/2016/05"
 linktitle = ""
-title = "搭建静态博客：hugo & github"
+title = "搭建静态博客：hugo & github pages"
 
 +++
 
@@ -19,9 +19,14 @@ title = "搭建静态博客：hugo & github"
 
 >Save the main executable as **hugo** (or **hugo.exe** on Windows) somewhere in your **PATH** as we will be using it in the next step.
 
-把下载好的hugo.exe随便放个地方，并且添加到Path中。也就是在：我的电脑-右键-属性-高级系统设置-环境变量中进行添加。
+把下载好的hugo.exe随便放个地方，并且添加到Path中。我的电脑-右键-属性-高级系统设置-环境变量中进行添加。
 
-（假设hugo.exe我放在C:\hugo中，则在path变量中加入`;C:\hugo`）
+Mac OS 则用[Homebrew](https://brew.sh/)来安装hugo，速度还可以
+
+```shell
+$ brew update
+$ brew install hugo
+```
 
 - **创建一个网站**
 
@@ -44,7 +49,7 @@ $ hugo new post/how-to-hugo.md
 
 期望的输出
 ```shell
-xxxx\content\post\how-to-hugo.md created
+xxxx/content/post/how-to-hugo.md created
 ```
 
 **注意**[Getting Started](https://gohugo.io/overview/quickstart/)**中提醒到：**
@@ -99,7 +104,7 @@ $ hugo server --buildDrafts
 $ hugo server --theme=theme-name --buildDrafts
 ```
 
-- **公开**
+- **打包**
 
 >So far all the posts that we have written are in draft status. To make a draft public, you can either run a command or manually change the draft status in the post to True.  
 >$ hugo undraft content/post/good-to-great.md
@@ -114,16 +119,18 @@ $ hugo server --theme=theme-name --buildDrafts
 $ hugo server --theme=theme-name
 ```
 
-- **生成、部署**
+静态博客生成了，你可以放到自己的私人服务器上了，什么？没有？往下看。
 
-这里打算部署到Github Pages上。
+- **部署**
+
+部署到Github Pages上。
 
 先创建一个Repository，名为yourGithubID.github.io
 
-之后生成我们的网站，生成命令就是去掉`server`参数
+之后打包我们的网站，生成命令就是去掉`server`参数
 
 ```shell
-$ hugo --theme=theme-name --baseUrl="http://yourGithubID.github.io/
+$ hugo --theme=theme-name --baseUrl=http://yourGithubID.github.io/
 ```
 
 之后会在项目根目录下生成一个public文件夹
@@ -147,9 +154,9 @@ $ git push -u origin master
 
 如果是~~技术~~博客，可以考虑使用代码高亮插件，官网[点这里](https://highlightjs.org/)，选则需要的高亮语言然后下载。
 
-根据hugo[Getting Started](https://gohugo.io/overview/quickstart/)的意思，这东西应该放在static目录下，假设放在static\highlight下。
+根据hugo[Getting Started](https://gohugo.io/overview/quickstart/)的意思，这东西应该放在static目录下，假设放在static/highlight下。
 
-最直接的使用方法就是（见highlight\README.MD）
+最直接的使用方法就是（见highlight/README.MD）
 
 >The bare minimum for using highlight.js on a web page is linking to the library along with one of the styles and calling *initHighlightingOnLoad*:
 
@@ -159,7 +166,7 @@ $ git push -u origin master
 <script>hljs.initHighlightingOnLoad();</script>
 ```
 
-我们刚刚假设我们的高亮插件放在static\highlight下，那么path/to应该换成highlight
+我们刚刚假设我们的高亮插件放在static/highlight下，那么path/to应该换成highlight
 
 ```html
 <link rel="stylesheet" href="/highlight/styles/default.css">
@@ -191,11 +198,3 @@ $ git push -u origin master
 - **之后的事**
 
 之后就是如何好好使用主题的问题了，只能参照主题给的sample或者文档来弄了。
-
-- 2016-5-17
-
-想更新博客了怎么办。尝试了下，用Github客户端直接添加public文件夹，当public文件夹有更新会自动识别，然后点（Commit）点（Sync）完事
-
-另外，感觉Github客户端的上传速度（60k）比Git Shell（6-10k）快啊，都是大半夜推的，辣鸡校园网。
-
-然后，准备把csdn上的旧文挑点搬过来~~充~~（bai）~~实~~（she）一下。

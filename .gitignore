@@ -1,1 +1,6 @@
-public/
+/public/
+/node_modules/
+/themes/future/static/css/style.bundle.css
+/themes/future/static/js/script.bundle.js
+/themes/future/static/js/respond.min.js
+/themes/future/static/js/html5shiv.js
